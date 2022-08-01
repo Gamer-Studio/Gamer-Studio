@@ -1,14 +1,16 @@
-<head>
-</head>
-
 <body>
-    <Test></Test>
     <script>
-        customElements.define("Test", class Test extends HTMLElement {
+        class Test extends HTMLElement {
             connectedCallback() {
-                let 라벨 = document.createElement('label');
-                라벨.innerHTML = "라벨!";
+                let label = document.createElement('label');
+                label.innerHTML = "라벨!";
+                this.appendChild(label);
+                let input = document.createElement('input');
+                this.appendChild(input)
             }
-        })
+        }
+        customElements.define("custom-test", Test)
     </script>
+    <custom-test></custom-test>
+    이게 왜 안되는거지
 </body>
