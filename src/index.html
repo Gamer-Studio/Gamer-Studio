@@ -1,0 +1,14 @@
+<head>
+</head>
+
+<body>
+    <Test></Test>
+    <script>
+        customElements.define("Test", class Test extends HTMLElement {
+            connectedCallback() {
+                let 라벨 = document.createElement('label');
+                라벨.innerHTML = "라벨!";
+            }
+        })
+    </script>
+</body>
